@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ttgsecure
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn ttgsecure.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: app.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: DEBUG
+        value: "False"
