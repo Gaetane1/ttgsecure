@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.T.G Network | Accueil </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <a href="index.html" class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="T.T.G Network">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}" class="active">Accueil</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'abouts' %}">À propos</a></li>
+                    <li><a href="{% url 'galeries' %}">Galerie</a></li>
+                    <li><a href="{% url 'temoignages' %} ">Temoignages</a></li>
+                    <li><a href="{% url 'message_list' %}">Discutions</a></li>
+                    <li><a href="{% url 'contacts' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main" style="margin-top: 100px;">
+    <div class="auth-info">
+      {% if user.is_authenticated %}
+        {% if user.photo %}
+          <img src="{{ user.photo.url }}" alt="Photo de profil" class="user-photo">
+        {% else %}
+          <span style="font-size: 1.2em;">👤</span>
+        {% endif %}
+
+        <span><strong>{{ user.username }}</strong></span>
+
+        {% if user.is_staff %}
+          <a href="{% url 'register' %}" class="button-link" style="text-decoration:none;">Créer un compte</a>
+        {% endif %}
+
+        <a href="{% url 'logout' %}" class="button-link logout-button" style="text-decoration:none;">Se déconnecter</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="button-link" style="text-decoration:none;">Se connecter</a>
+      {% endif %}
+    </div>
+
+    {% block 'content' %}{% endblock %}
+
+  </main>
+
+    <footer class="espaces" style="padding-top: 100px; margin-top:30px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>T.T.G Network</h3>
+                    <p>Solutions innovantes pour propulser votre entreprise vers l'excellence depuis 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'serice_infos' %}">Services Informatiques</a></li>
+                        <li><a href="{% url 'maisons' %}">Gestion Immobilière</a></li>
+                        <li><a href="{% url 'vehicules' %}">Vehicules</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Entreprise</h3>
+                    <ul>
+                        <li><a href="equipe.html">Équipe</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Av. de l'Indépendance, Brazzaville</p>
+                        <p><i class="fas fa-phone"></i> (+242) 06 910 37 15</p>
+                        <p><i class="fas fa-envelope"></i> contact@ttgnetwork.com</p>
+                        <p><i class="fas fa-clock"></i> Lun-Ven: 8h-17h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 T.T.G Network. Tous droits réservés. | <a href="#">Mentions Légales</a> | <a href="#">Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+</body>
+</html>

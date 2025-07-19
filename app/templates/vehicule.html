@@ -1,0 +1,209 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/vehicules.css' %}">
+
+<main>
+    <!-- Hero Section -->
+    <section class="vehicules-hero">
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="{% static 'images/video/02.mp4' %}" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="hero-content">
+          <h1>Solutions Véhicules sur Mesure</h1>
+          <p>Location, vente et dédouanement de véhicules neufs et d'occasion</p>
+      </div>
+    </section>
+
+    <!-- Services Véhicules -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Nos Services Véhicules</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Vente de Véhicules</h3>
+            <ul>
+              <li>Voitures particulières neuves et d'occasion</li>
+              <li>Utilitaires et véhicules professionnels</li>
+              <li>Importation sur commande</li>
+              <li>Financement et crédit auto</li>
+            </ul>
+            <a href="#vente" class="btn-service">Voir nos véhicules</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <h3>Location Longue Durée</h3>
+            <ul>
+              <li>Forfaits mensuels adaptés</li>
+              <li>Maintenance incluse</li>
+              <li>Renouvellement du parc</li>
+              <li>Solutions pour entreprises</li>
+            </ul>
+            <a href="#location" class="btn-service">Voir les offres</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-passport"></i>
+            </div>
+            <h3>Dédouanement</h3>
+            <ul>
+              <li>Importation de véhicules</li>
+              <li>Procédures administratives</li>
+              <li>Calcul des droits et taxes</li>
+              <li>Livraison clé en main</li>
+            </ul>
+            <a href="#dedouanement" class="btn-service">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Véhicules Disponibles -->
+    <section class="vehicules-dispo" id="vente">
+      <div class="container">
+        <h2>Nos Véhicules Disponibles</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="neuf">Neufs</button>
+          <button class="filter-btn" data-filter="occasion">Occasions</button>
+          <button class="filter-btn" data-filter="utilitaire">Utilitaires</button>
+        </div>
+        
+        <div class="vehicules-grid">
+          <!-- Véhicule 1 -->
+          <div class="vehicule-card" data-category="neuf">
+            <div class="vehicule-image">
+              <img src="{% static 'images/voiture/10.jpg' %}" alt="Toyota RAV4 2023">
+              <span class="badge new">Nouveau</span>
+            </div>
+            <div class="vehicule-info">
+              <h3>Toyota LandCruiser 300 Series</h3>
+              <div class="vehicule-specs">
+                <span><i class="fas fa-gas-pump"></i> Essence</span>
+                <span><i class="fas fa-tachometer-alt"></i> 15,000 km</span>
+                <span><i class="fas fa-car"></i> SUV</span>
+              </div>
+              <div class="vehicule-price">
+                <p class="price">35,000 $</p>
+                <p class="financement">1,200 $/mois*</p>
+              </div>
+              <a href="#" class="btn-details">Voir détails</a>
+            </div>
+          </div>
+
+          <!-- Véhicule 2 -->
+          <div class="vehicule-card" data-category="occasion">
+            <div class="vehicule-image">
+              <img src="{% static 'images/voiture/04.jpg' %}" alt="BMW Série 3 2019">
+              <span class="badge occasion">Occasion</span>
+            </div>
+            <div class="vehicule-info">
+              <h3>Toyota RAV4 Série 3 2019</h3>
+              <div class="vehicule-specs">
+                <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                <span><i class="fas fa-tachometer-alt"></i> 45,000 km</span>
+                <span><i class="fas fa-car"></i> Berline</span>
+              </div>
+              <div class="vehicule-price">
+                <p class="price">28,500 $</p>
+                <p class="financement">950 $/mois*</p>
+              </div>
+              <a href="#" class="btn-details">Voir détails</a>
+            </div>
+          </div>
+
+          <!-- Ajoutez d'autres véhicules ici -->
+        </div>
+
+        <div class="cta-vehicules">
+          <a href="galerie.html" class="btn btn-outline">Voir tout notre stock</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+      <div class="container">
+        <div class="location-content">
+          <h2>Location Longue Durée</h2>
+          <p>Bénéficiez de nos solutions de location flexible avec services inclus :</p>
+          <ul class="location-features">
+            <li><i class="fas fa-check"></i> Assurance tous risques</li>
+            <li><i class="fas fa-check"></i> Maintenance et entretien</li>
+            <li><i class="fas fa-check"></i> Assistance 24h/24</li>
+            <li><i class="fas fa-check"></i> Changement de véhicule</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Demander un devis</a>
+        </div>
+        <div class="location-image">
+          <img src="{% static 'images/voiture/5.jpg' %}" alt="Location longue durée">
+        </div>
+      </div>
+    </section>
+
+    <!-- Dédouanement Section -->
+    <section class="dedouanement-section" id="dedouanement">
+      <div class="container">
+        <h2>Service de Dédouanement</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Évaluation</h3>
+            <p>Analyse des documents et estimation des coûts</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Importation</h3>
+            <p>Prise en charge des procédures douanières</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Livraison</h3>
+            <p>Remise du véhicule avec papiers complets</p>
+          </div>
+        </div>
+        <div class="documents-required">
+          <h3>Documents nécessaires :</h3>
+          <ul>
+            <li><i class="fas fa-file-alt"></i> Facture originale</li>
+            <li><i class="fas fa-file-alt"></i> Certificat de conformité</li>
+            <li><i class="fas fa-file-alt"></i> Titre de propriété</li>
+            <li><i class="fas fa-file-alt"></i> Passeport/Carte d'identité</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Un projet véhicule ?</h2>
+        <p>Notre équipe spécialisée vous accompagne de A à Z</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-outline"><i class="fas fa-phone-alt"></i> (+242) 06 910 37 15</a>
+          <a href="formulaire.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Demande en ligne</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+<script src="{% static 'js/vehicules.js' %}"></script>
+
+{% endblock  %} 

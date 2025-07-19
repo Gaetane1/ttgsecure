@@ -1,0 +1,248 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/formulaire.css' %}">
+   <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Espace Client</h1>
+                <p>Contactez notre service client</p>
+            </div>
+        </section>
+        <div class="form-container">
+            
+            <!-- Onglets de navigation -->
+            <div class="form-tabs">
+                <button class="tab-btn active" data-tab="create-account">Créer un compte</button>
+                <button class="tab-btn" data-tab="update-profile">Modifier profil</button>
+                <button class="tab-btn" data-tab="request-service">Demande de service</button>
+            </div>
+
+            <!-- Formulaire 1 : Création de compte -->
+            <section id="create-account" class="form-section active">
+                <h2>Création de compte client</h2>
+                <form id="form-create-account">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="create-nom">Nom</label>
+                            <input type="text" id="create-nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-prenom">Prénom</label>
+                            <input type="text" id="create-prenom" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="create-email">Email</label>
+                        <input type="email" id="create-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="create-tel">Téléphone</label>
+                        <input type="tel" id="create-tel">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="create-password">Mot de passe</label>
+                            <input type="password" id="create-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-confirm">Confirmer le mot de passe</label>
+                            <input type="password" id="create-confirm" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Créer mon compte</button>
+                    <div id="create-message" class="form-message"></div>
+                </form>
+            </section>
+
+            <!-- Formulaire 2 : Mise à jour de profil -->
+            <section id="update-profile" class="form-section">
+                <h2>Mise à jour du profil</h2>
+                <form id="form-update-profile">
+                    <div class="form-group">
+                        <label for="update-email">Email (identifiant)</label>
+                        <input type="email" id="update-email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="update-nom">Nouveau nom</label>
+                            <input type="text" id="update-nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="update-prenom">Nouveau prénom</label>
+                            <input type="text" id="update-prenom">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-tel">Nouveau téléphone</label>
+                        <input type="tel" id="update-tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="update-password">Nouveau mot de passe (laisser vide si inchangé)</label>
+                        <input type="password" id="update-password">
+                    </div>
+                    <button type="submit" class="submit-btn">Mettre à jour</button>
+                    <div id="update-message" class="form-message"></div>
+                </form>
+            </section>
+
+            <!-- Formulaire 3 : Demande de service -->
+            <section id="request-service" class="form-section">
+                <h2>Demande de service</h2>
+                <form id="form-request-service">
+                    <div class="form-group">
+                        <label for="request-email">Email (identifiant client)</label>
+                        <input type="email" id="request-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="request-service">Type de service</label>
+                        <select id="request-service" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="maintenance">Maintenance informatique</option>
+                            <option value="reseau">Installation réseau</option>
+                            <option value="developpement">Développement web/mobile</option>
+                            <option value="formation">Formation</option>
+                            <option value="location">Location immobilière</option>
+                            <option value="vente">Vente de parcelle</option>
+                            <option value="dédouanement">Dédouanement véhicule</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="request-date">Date souhaitée</label>
+                        <input type="date" id="request-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="request-details">Détails de la demande</label>
+                        <textarea id="request-details" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer la demande</button>
+                    <div id="request-message" class="form-message"></div>
+                </form>
+            </section>
+        </div>
+    </main><br><br><br>
+    <script>
+        // Gestion des onglets
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const formSections = document.querySelectorAll('.form-section');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Désactiver tous les onglets et sections
+                tabBtns.forEach(b => b.classList.remove('active'));
+                formSections.forEach(section => section.classList.remove('active'));
+                
+                // Activer l'onglet et la section cliqués
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Gestion du formulaire de création de compte
+        document.getElementById('form-create-account').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('create-email').value;
+            const password = document.getElementById('create-password').value;
+            const confirmPassword = document.getElementById('create-confirm').value;
+            const messageEl = document.getElementById('create-message');
+            
+            // Validation
+            if (password !== confirmPassword) {
+                showMessage(messageEl, 'Les mots de passe ne correspondent pas', 'error');
+                return;
+            }
+            
+            // Vérifier si l'email existe déjà
+            if (localStorage.getItem(email)) {
+                showMessage(messageEl, 'Un compte avec cet email existe déjà', 'error');
+                return;
+            }
+            
+            // Enregistrer le compte
+            const account = {
+                nom: document.getElementById('create-nom').value,
+                prenom: document.getElementById('create-prenom').value,
+                tel: document.getElementById('create-tel').value,
+                password: password,
+                services: []
+            };
+            
+            localStorage.setItem(email, JSON.stringify(account));
+            showMessage(messageEl, 'Compte créé avec succès!', 'success');
+            this.reset();
+        });
+
+        // Gestion du formulaire de mise à jour
+        document.getElementById('form-update-profile').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('update-email').value;
+            const messageEl = document.getElementById('update-message');
+            const account = JSON.parse(localStorage.getItem(email));
+            
+            if (!account) {
+                showMessage(messageEl, 'Aucun compte trouvé avec cet email', 'error');
+                return;
+            }
+            
+            // Mettre à jour les champs modifiés
+            const newNom = document.getElementById('update-nom').value;
+            const newPrenom = document.getElementById('update-prenom').value;
+            const newTel = document.getElementById('update-tel').value;
+            const newPassword = document.getElementById('update-password').value;
+            
+            if (newNom) account.nom = newNom;
+            if (newPrenom) account.prenom = newPrenom;
+            if (newTel) account.tel = newTel;
+            if (newPassword) account.password = newPassword;
+            
+            localStorage.setItem(email, JSON.stringify(account));
+            showMessage(messageEl, 'Profil mis à jour avec succès!', 'success');
+            this.reset();
+        });
+
+        // Gestion des demandes de service
+        document.getElementById('form-request-service').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('request-email').value;
+            const messageEl = document.getElementById('request-message');
+            const account = JSON.parse(localStorage.getItem(email));
+            
+            if (!account) {
+                showMessage(messageEl, 'Aucun compte trouvé avec cet email', 'error');
+                return;
+            }
+            
+            // Ajouter la demande de service
+            const service = {
+                type: document.getElementById('request-service').value,
+                date: document.getElementById('request-date').value,
+                details: document.getElementById('request-details').value,
+                status: 'En attente',
+                dateSoumission: new Date().toLocaleDateString()
+            };
+            
+            account.services.push(service);
+            localStorage.setItem(email, JSON.stringify(account));
+            
+            showMessage(messageEl, 'Demande envoyée! Nous vous contacterons bientôt.', 'success');
+            this.reset();
+        });
+
+        // Fonction utilitaire pour afficher les messages
+        function showMessage(element, text, type) {
+            element.textContent = text;
+            element.className = `form-message ${type}`;
+            element.style.display = 'block';
+            
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+
+  {% endblock  %} 

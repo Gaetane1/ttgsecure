@@ -1,0 +1,37 @@
+{% extends "herites.html" %}
+{% load static %}
+{% block 'content' %}
+  <link rel="stylesheet" href="{% static 'css/message.css' %}">
+<div class="contenu_message" style="width: 75%;">
+      <h2 style="color: #2c3e50; margin-bottom: 20px;">📝 Envoyer un message sécurisé</h2>
+
+  <form method="post" style="display: flex; flex-direction: column; gap: 15px;">
+    {% csrf_token %}
+    
+    <label for="texte" style="font-weight: bold;">Votre message :</label>
+    <textarea name="texte" id="texte" rows="6" style="
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      resize: vertical;
+    " required></textarea>
+
+    <button type="submit" style="
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">
+      📤 Envoyer
+    </button>
+  </form>
+
+  <br>
+  <a href="{% url 'message_list' %}" style="color: #3498db;">⬅️ Retour à la liste des messages</a>
+</div>
+{% endblock %}

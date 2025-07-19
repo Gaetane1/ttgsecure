@@ -1,0 +1,25 @@
+{% extends "herites.html" %}
+{% load static %}
+{% block 'content' %}
+  <link rel="stylesheet" href="{% static 'css/message.css' %}">
+
+  <h2 style="padding-top: 100px; margin-top:30px;">📋 Messages disponibles (binaire)</h2>
+  <a href="{% url 'envoyer_message' %}" class="btn btn-primary" role="button" style="text-decoration:none; margin-top: 15px;">📝 Envoyer un nouveau message</a><br><br>
+
+<div class="contenu_message" style="width: 75%;">
+    {% for msg in messages %}
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+      <p><strong>De :</strong> {{ msg.auteur.username }} | <strong>Date :</strong> {{ msg.date_envoye }}</p>
+      <p><code>{{ msg.binaire }}</code></p>
+
+      {% if user.is_authenticated %}
+        <a href="{% url 'decrypter_message' msg.id %}" class="btn btn-primary" style="text-decoration:none;">🔓 Décrypter</a>
+      {% else %}
+        <em>🔒 Connectez-vous pour décrypter</em>
+      {% endif %}
+    </div>
+  {% empty %}
+    <p>Aucun message pour le moment.</p>
+  {% endfor %}
+</div>
+{% endblock %}

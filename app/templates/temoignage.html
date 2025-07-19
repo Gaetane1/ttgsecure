@@ -1,0 +1,58 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/temoignages.css' %}">
+     <main>
+
+        <section class="testimonials-hero">
+            <h1>Ce que disent nos clients</h1>
+            <p>Découvrez les retours d'expérience de ceux qui nous ont fait confiance</p>
+        </section>
+
+        <div class="testimonials-container">
+            <h2 class="section-title">Nos clients satisfaits</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "T.T.G Network a résolu tous nos problèmes réseau en moins de 24h. Professionnalisme et réactivité exceptionnels !"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/03.jpg' %}" alt="Photo client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>TCHITEMBO Rhey</h4>
+                            <p>PDG, Société Total</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "Le système de vidéosurveillance installé a déjà permis de prévenir deux intrusions. Service complet et suivi impeccable."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/05.jpg' %}" alt="Photo client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>MOUSSOUNDA Isaac</h4>
+                            <p>Directeur, de Puna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "J'ai trouvé la parcelle parfaite grâce à leur service immobilier. Dossier clair et accompagnement personnalisé."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/06.jpg' %}" alt="Photo client" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Massiala kelly</h4>
+                            <p>Particulier</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><br><br><br>
+  {% endblock  %} 

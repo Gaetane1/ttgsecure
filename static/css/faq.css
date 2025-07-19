@@ -1,0 +1,65 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Section FAQ */
+main {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+fieldset {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+legend {
+    padding: 0 10px;
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+details {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+}
+
+details[open] summary {
+    color: #007bff;
+}
+
+details p {
+    padding: 10px;
+    margin: 10px 0 0 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+}

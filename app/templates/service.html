@@ -1,0 +1,214 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+<main>
+    <!-- Hero Section -->
+    <section class="services-hero">
+      <div class="imag1"></div>
+      <div class="hero-content">
+        <h1>Nos Solutions Professionnelles</h1>
+        <p>Découvrez l'étendue de nos services pour répondre à tous vos besoins</p>
+        <button class="btn-hero"><a href="{% static 'contacts' %}">Contactez-nous</a></button>
+      </div>
+    </section>
+
+    <!-- Services Tabs -->
+    <section class="services-tabs">
+      <div class="container">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="informatique">Services Informatiques</button>
+          <button class="tab-btn" data-tab="immobilier">Gestion Immobilière</button>
+        </div>
+
+        <!-- Informatique Tab -->
+        <div id="informatique" class="tab-content active">
+          <div class="service-intro">
+            <h2><i class="fas fa-laptop-code"></i> Solutions Technologiques</h2>
+            <p>Nous offrons une gamme complète de services IT pour optimiser votre infrastructure numérique</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Maintenance Informatique</h3>
+              <ul>
+                <li>Dépannage matériel et logiciel</li>
+                <li>Nettoyage et optimisation</li>
+                <li>Support technique 24/7</li>
+              </ul>
+              <a href="{% static 'serice_infos' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3>Réseaux & Sécurité</h3>
+              <ul>
+                <li>Installation réseau</li>
+                <li>Configuration pare-feu</li>
+                <li>Surveillance 24h/24</li>
+              </ul>
+              <a href="{% static 'serice_infos' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Développement Web</h3>
+              <ul>
+                <li>Sites vitrine</li>
+                <li>Applications métiers</li>
+                <li>E-commerce</li>
+              </ul>
+              <a href="{% static 'serice_infos' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3>Surveillance</h3>
+              <ul>
+                <li>Installation caméras</li>
+                <li>Systèmes de monitoring</li>
+                <li>Analyse vidéo IA</li>
+              </ul>
+              <a href="{% static 'serice_infos' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+            </div>
+              <div class="cta-gallery">
+                <a href="{% static 'serice_infos' %}" class="btn btn-primary">Plus d'information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Immobilier Tab -->
+        <div id="immobilier" class="tab-content">
+          <div class="service-intro">
+            <h2><i class="fas fa-home"></i> Solutions Immobilières</h2>
+            <p>Gestion complète de vos biens immobiliers avec notre expertise</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-key"></i>
+              </div>
+              <h3>Location</h3>
+              <ul>
+                <li>Gestion locative</li>
+                <li>Sélection locataires</li>
+                <li>Contrats légaux</li>
+              </ul>
+              <a href="{% static 'maisons' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3>Vente</h3>
+              <ul>
+                <li>Évaluation de biens</li>
+                <li>Marketing immobilier</li>
+                <li>Négociation</li>
+              </ul>
+              <a href="{% static 'maisons' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h3>Terrain</h3>
+              <ul>
+                <li>Transaction parcellaire</li>
+                <li>Lotissement</li>
+                <li>Viabilisation</li>
+              </ul>
+              <a href="{% static 'maisons' %}" class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <h3>Véhicules</h3>
+              <ul>
+                <li>Importation</li>
+                <li>Dédouanement</li>
+                <li>Location longue durée</li>
+              </ul>
+              <a href="{% static 'vehicules' %} " class="btn-service">Détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+            </div>
+              <div class="cta-gallery">
+                <a href="{% static 'maisons' %} " class="btn btn-outline">Plus d'information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valeurs -->
+    <section class="values-section">
+      <div class="container">
+        <h2>Notre Approche</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Précision</h3>
+            <p>Solutions adaptées à vos besoins spécifiques</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-clock"></i>
+            <h3>Réactivité</h3>
+            <p>Intervention rapide et suivi rigoureux</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-lock"></i>
+            <h3>Sécurité</h3>
+            <p>Protection de vos données et biens</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Performance</h3>
+            <p>Résultats mesurables et durables</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Un projet en tête ?</h2>
+          <p>Notre équipe est à votre disposition pour discuter de vos besoins</p>
+          <div class="cta-buttons">
+            <a href="{% static 'contacts' %}" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Nous appeler</a>
+            <a href="{% static 'contacts' %}" class="btn btn-outline"><i class="fas fa-envelope"></i> Demande en ligne</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+
+  <script src="{% static 'js/services.js' %}"></script>
+  {% endblock  %} 

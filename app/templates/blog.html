@@ -1,0 +1,55 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<section class="page-header">
+        <div class="container">
+            <h1>Notre Blog</h1>
+            <p>Actualités et conseils en informatique et immobilier</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="{% static 'images/info/12.jpg' %}" alt="Sécurité informatique">
+                    <div class="post-date">15 Juin 2023</div>
+                </div>
+                <div class="post-content">
+                    <h2>5 Conseils pour Sécuriser Votre Réseau d'Entreprise</h2>
+                    <p>Découvrez les meilleures pratiques pour protéger vos données sensibles contre les cyberattaques...</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="{% static 'images/maisons/001.jpeg' %}" alt="Immobilier digital">
+                    <div class="post-date">2 Mai 2023</div>
+                </div>
+                <div class="post-content">
+                    <h2>L'Impact du Digital sur le Marché Immobilier</h2>
+                    <p>Comment les nouvelles technologies transforment l'achat et la location de biens immobiliers...</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+            </article>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">→</a>
+            </div>
+        </div>
+    </section>
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+  {% endblock  %} 

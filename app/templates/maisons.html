@@ -1,0 +1,143 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'css/immobilier.css' %}">
+ <main>
+    <!-- Hero Section -->
+    <section class="hero-immobilier">
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="{% static 'images/video/01.mp4' %}" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="hero-content">
+          <h1>Gestion Immobilière Professionnelle</h1>
+          <p>Des solutions sur mesure pour vos propriétés, de la location à la vente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Immobiliers -->
+    <section class="services-section">
+      <div class="container">
+        <h2>Nos Services Immobiliers</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Location de Maisons</h3>
+            <p>Gestion complète de vos biens locatifs avec sélection rigoureuse des locataires.</p>
+            <a href="#" class="btn-service">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-handshake"></i>
+            <h3>Vente de Propriétés</h3>
+            <p>Expertise en valorisation et commercialisation de vos biens immobiliers.</p>
+            <a href="#" class="btn-service">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Transaction Terrain</h3>
+            <p>Acquisition et vente de parcelles avec conseils en aménagement.</p>
+            <a href="#" class="btn-service">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processus -->
+    <section class="process-section">
+      <div class="container">
+        <h2>Notre Processus</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Évaluation</h3>
+            <p>Analyse détaillée de votre bien et estimation précise.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Marketing</h3>
+            <p>Campagne promotionnelle multicanale pour maximiser la visibilité.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Transaction</h3>
+            <p>Négociation et finalisation en toute sécurité.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Suivi</h3>
+            <p>Accompagnement post-transaction pour votre sérénité.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie de Propriétés -->
+    <section class="property-gallery">
+      <div class="container">
+        <h2>Nos Propriétés Phares</h2>
+        <div class="gallery-grid">
+          <div class="property-card">
+            <img src="{% static 'images/maisons/t2.jpeg' %}" alt="Villa Moderne">
+            <div class="property-info">
+              <h3>Villa Moderne</h3>
+              <p class="price">250,000 $</p>
+              <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier Résidentiel</p>
+              <ul class="features">
+                <li><i class="fas fa-bed"></i> 4 Chambres</li>
+                <li><i class="fas fa-bath"></i> 3 Salles de bain</li>
+                <li><i class="fas fa-ruler-combined"></i> 320 m²</li>
+              </ul>
+              <a href="#" class="btn-details">Voir détails</a>
+            </div>
+          </div>
+          <!-- Ajoutez d'autres propriétés ici -->
+        </div>
+        <div class="cta-gallery">
+          <a href="galerie.html" class="btn btn-outline">Voir toutes nos propriétés</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Ce Que Disent Nos Clients</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <p>"TTG Network a trouvé le locataire parfait pour ma maison en moins d'une semaine. Service exceptionnel!"</p>
+            <div class="client-info">
+              <img src="{% static 'images/004.jpeg' %}" alt="Client" >
+              <div>
+                <h4>Marie Loubaki</h4>
+                <span>Propriétaire</span>
+              </div>
+            </div>
+          </div>
+          <!-- Ajoutez d'autres témoignages ici -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Prêt à concrétiser votre projet immobilier?</h2>
+        <a href="contact.html" class="btn btn-outline">Contactez notre équipe</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+
+  <script src="{% static 'js/script.js' %}"></script>
+  {% endblock  %} 

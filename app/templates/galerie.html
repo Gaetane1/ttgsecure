@@ -1,0 +1,855 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+
+  <link rel="stylesheet" href="{% static 'css/galerie.css' %}">
+ <main class="galerie-main">
+        <section class="hero-galerie">
+            <h1>Notre Galerie Exclusive</h1>
+            <p>Découvrez nos propriétés et véhicules disponibles</p>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">Tout voir</button>
+            <button class="filter-btn" data-filter="maison">Maisons</button>
+            <button class="filter-btn" data-filter="voiture">Véhicules</button>
+            <button class="filter-btn" data-filter="informatique">Informatique</button>
+        </section>
+
+        <section class="galerie-section" id="maison">
+            <h2><i class="fas fa-home"></i> Nos Propriétés Immobilières</h2>
+            <div class="galerie-grid">
+                <!-- Maison 1 -->
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/01.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">250,000 $</p>
+                        </div>
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/02.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">270,000 $</p>
+                        </div>
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/03.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">250,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/04.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">350,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/05.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">280,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/06.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">370,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/07.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">280,000 $</p>
+                        </div>
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/08.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">240,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/10.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">250,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>               
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/11.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">360,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/12.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">230,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="galerie-item" data-category="maison">
+                    <div class="image-container">
+                        <img src="{% static 'images/maisons/13.jpg' %}" alt="Maison moderne">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>Maison Moderne</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Quartier résidentiel</p>
+                        <div class="details">
+                            <span><i class="fas fa-bed"></i> 4 Chambres</span>
+                            <span><i class="fas fa-bath"></i> 3 Salles de bain</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220 m²</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">250,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez d'autres maisons ici -->
+            </div>
+        </section>
+
+        <section class="galerie-section" id="voiture">
+            <h2><i class="fas fa-car"></i> Nos Véhicules Disponibles</h2>
+            <div class="galerie-grid">
+                <!-- Voiture 1 -->
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/3.jpeg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">50,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/Voiture.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">450,000 $</p>
+                        </div>
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/6.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">45,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/7.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">60,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/01.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">48,000 $</p>
+                        </div>                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/02.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">350,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/03.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">320,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/04.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">50,000 $</p>
+                        </div>                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/05.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">45,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/06.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">460,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/07.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">200,000 $</p>
+                        </div>                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-category="voiture">
+                    <div class="image-container">
+                        <img src="{% static 'images/voiture/08.jpg' %}" alt="Voiture de luxe">
+                        <div class="overlay">
+                            <button class="quick-view"><i class="fas fa-expand"></i> Voir plus</button>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <h3>BMW Série 5</h3>
+                        <p class="location"><i class="fas fa-gas-pump"></i> Essence | <i class="fas fa-tachometer-alt"></i> 25,000 km</p>
+                        <div class="details">
+                            <span><i class="fas fa-cog"></i> Automatique</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                            <span><i class="fas fa-palette"></i> Noir</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price">52,000 $</p>
+                        </div>                        
+                        <div>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-buy">
+                                <i class="fas fa-shopping-cart"></i> Acheter
+                            </a>
+                            <a href="{% url 'contacts' %}" class="gallery-btn btn-rent">
+                                <i class="fas fa-calendar-alt"></i> Louer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez d'autres voitures ici -->
+            </div>
+        </section>
+
+        <section class="galerie-section" id="informatique">
+         <!-- Section Informatique -->
+                <h2>Nos Services Informatiques</h2>
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <a href="#service1">
+                            <img src="{% static 'images/info/07.jpg' %}" alt="Infrastructure Serveur" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Infrastructure Serveur</h3>
+                            <p class="gallery-desc">Solution clé en main pour entreprises</p>
+                            <div class="gallery-price">À partir de 10,000 $</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>                  
+
+                    <div class="gallery-item">
+                        <a href="#service2">
+                            <img src="{% static 'images/info/08.jpg' %}" alt="Formation IT" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Sécurité Renforcée</h3>
+                            <p class="gallery-desc">Protection contre les cybermenaces avec mise à jour permanente</p>
+                            <div class="gallery-price">À partir de 100,000 $</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#service2">
+                            <img src="{% static 'images/info/06.jpg' %}" alt="Formation IT" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Formation IT</h3>
+                            <p class="gallery-desc">Certifications pour vos équipes</p>
+                            <div class="gallery-price">À partir de 500 $/personne</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> S'inscrire
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <div class="gallery-item">
+                        <a href="#service2">
+                            <img src="{% static 'images/info/05.jpg' %}" alt="Formation IT" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Cameras</h3>
+                            <p class="gallery-desc">Installation des cameras de surveillances</p>
+                            <div class="gallery-price">À partir de 7,000</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <div class="gallery-item">
+                        <a href="#service2">
+                            <img src="{% static 'images/info/04.jpg' %}" alt="Formation IT" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Programmation</h3>
+                            <p class="gallery-desc">Développement d'applications web et mobiles</p>
+                            <div class="gallery-price">À partir de 6,000</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#service2">
+                            <img src="{% static 'images/info/02.jpg' %}" alt="Formation IT" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">technicien Support informatique</h3>
+                            <p class="gallery-desc">Maintenance et depannage informatique</p>
+                            <div class="gallery-price">À partir de 5,000 $</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="gallery-item">
+                        <a href="#service3">
+                            <img src="{% static 'images/info/01.jpg' %}" alt="Réseaux Informatiques" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Réseaux Informatiques</h3>
+                            <p class="gallery-desc">Installation et maintenance professionnelle</p>
+                            <div class="gallery-price">À partir de 7,000 $</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Demander un devis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="gallery-item">
+                        <a href="#service1">
+                            <img src="{% static 'images/info/09.jpg' %}" alt="Infrastructure Serveur" class="gallery-img">
+                        </a>
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Vendre</h3>
+                            <p class="gallery-desc">Vendre des cameras</p>
+                            <div class="gallery-price">À partir de 1,000 $</div>
+                            <div class="gallery-buttons">
+                                <a href="#" class="gallery-btn btn-buy">
+                                    <i class="fas fa-shopping-cart"></i> Achat
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+        </section>
+    </main>
+
+
+   <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+
+    <script src="{% static 'js/galerie.js' %}"></script>
+  {% endblock  %} 

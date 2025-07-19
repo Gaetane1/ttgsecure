@@ -1,0 +1,52 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/a-propos.css' %}">
+   <main>
+
+        <section class="page-header">
+            <div class="container">
+                <h1>À propos de T.T.G Network</h1>
+                <p>Découvrez notre histoire, notre mission et notre équipe</p>
+            </div>
+        </section>
+        <section class="about-section">
+            <h2>Qui sommes-nous ?</h2>
+            <p>
+                Fondée en 2020, <strong>T.T.G Network</strong> est une entreprise pluridisciplinaire basée en Afrique, 
+                spécialisée dans les services informatiques et la gestion immobilière. Notre mission est d'offrir des 
+                solutions innovantes et adaptées à chaque client.
+            </p>
+
+            <div class="values-list">
+                <h3>Nos valeurs</h3>
+                <ul>
+                    <li><strong>Innovation</strong> : Adopter les dernières technologies</li>
+                    <li><strong>Qualité</strong> : Des services haut de gamme</li>
+                    <li><strong>Engagement</strong> : Satisfaction client garantie</li>
+                </ul>
+            </div><br>
+
+            <h3>Notre équipe</h3><br>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="{% static 'images/3.jpg' %}" alt="Photo de Gaëtane MVIBUNDULU">
+                    <h4>Gaëtan MVIBUNDULU</h4>
+                    <p>Directeur Générale</p>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'images/2.jpg' %}" alt="Photo d'un collaborateur">
+                    <h4>NGOMA Jean</h4>
+                    <p>Responsable Informatique</p>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'images/04.png' %}" alt="Photo d'un collaborateur">
+                    <h4>Kouka Christ</h4>
+                    <p>Gestion Immobilière</p>
+                </div>
+            </div>
+        </section>
+    </main><br><br><br>
+
+
+  {% endblock  %} 

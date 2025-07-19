@@ -1,0 +1,143 @@
+/* Ajoutez ces styles à votre fichier CSS existant */
+.page-header {
+    margin-top: 6.5rem;
+    text-align: center;
+    padding: 60px 0;
+    background-color: #2563eb;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.page-header p{
+    color: white;
+}
+.form-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-btn:not(.active):hover {
+    background: #ddd;
+}
+
+/* Amélioration pour les petits écrans */
+@media (max-width: 480px) {
+    .form-tabs {
+        flex-direction: column;
+    }
+    .tab-btn {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+     .form-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .form-tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        .tab-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        .form-section {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-section.active {
+            display: block;
+        }
+        .form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        .form-message {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }

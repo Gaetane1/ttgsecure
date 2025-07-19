@@ -1,0 +1,119 @@
+  {% extends "herite.html" %}
+  {% block 'corps' %}
+  {% load static %}
+      <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Excellence Technologique & Solutions Immobilières</h1>
+                <p>Nous accompagnons votre entreprise avec des solutions sur mesure pour une transformation digitale réussie et une gestion immobilière optimale.</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'services' %}" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Découvrir nos services
+                    </a>
+                    <a href="{% url 'contacts' %}" class="btn btn-outline">
+                        <i class="fas fa-phone"></i> Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos <span class="text-gradient">Services Premium</span></h2>
+                <p>Des solutions haut de gamme adaptées aux besoins exigeants des entreprises modernes</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Infrastructure Réseau</h3>
+                        <p>Conception et déploiement d'infrastructures réseau sécurisées et performantes pour votre entreprise.</p>
+                        <a href="{% url 'serice_infos' %}" class="btn btn-outline" style="margin-top: 1rem;">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Développement Sur Mesure</h3>
+                        <p>Création d'applications web et mobiles personnalisées pour optimiser vos processus métiers.</p>
+                        <a href="{% url 'serice_infos' %}" class="btn btn-outline" style="margin-top: 1rem;">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion Immobilière</h3>
+                        <p>Solutions complètes pour la gestion, la location et la valorisation de votre patrimoine immobilier.</p>
+                        <a href="{% url 'maisons' %}" class="btn btn-outline" style="margin-top: 1rem;">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="{% static 'images/1.jpeg' %}" alt="Notre équipe d'experts">
+                </div>
+                <div class="about-content">
+                    <h2>Une Approche <span class="text-gradient">Humaine</span> et Professionnelle</h2>
+                    <p>Depuis notre création, nous avons bâti notre réputation sur l'excellence opérationnelle et la satisfaction client. Notre équipe pluridisciplinaire réunit les meilleurs talents pour vous offrir un service incomparable.</p>
+                    <p>Nous croyons en des relations durables avec nos clients, fondées sur la transparence et l'engagement mutuel.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Clients Satisfaits</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Taux de Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ils Nous Ont <span class="text-gradient">Fait Confiance</span></h2>
+                <p>Découvrez ce que nos clients disent de leur expérience avec T.T.G Network</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à Transformer Votre Entreprise ?</h2>
+            <p>Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs.</p>
+            <a href="{% url 'contacts' %}" class="btn btn-primary" style="background: white; color: var(--primary);">
+                <i class="fas fa-paper-plane"></i> Envoyer un message
+            </a>
+        </div>
+    </section>
+  {% endblock  %} 
