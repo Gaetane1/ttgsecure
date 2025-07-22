@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-(ryz&62&3hku!jxz@37&#bd7c%tya^hyd9^ezejf#ek+i@1e!=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -74,6 +74,9 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+
+DATABASES['default'] = dj_database_url.config(default='sqlite:///db.sqlite3')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
